@@ -29,7 +29,7 @@
   const todayDate = today.getDate();
 
   let calendarHtml = '<table><thead><tr>';
-  const weeks = ['日', '月', '火', '水', '木', '金', '月'];
+  const weeks = ['日', '月', '火', '水', '木', '金', '土'];
 
   for (let i = 0; i < 7; i++) {
     calendarHtml += '<th>' + weeks[i] + '</th>';
