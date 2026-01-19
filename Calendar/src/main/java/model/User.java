@@ -7,6 +7,15 @@ public class User {
 	private String userName;
 	private int icon;
 	
+	//コンストラクタ
+	public User() {
+		
+	}
+	
+	public User(int userId,String passwd,String userName,int icon) {
+		
+	}
+	
 	//userIdのsetter&getter
 	public void setUserId(int userId) {
 		this.userId = userId;

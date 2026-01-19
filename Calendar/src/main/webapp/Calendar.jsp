@@ -13,8 +13,8 @@
 <body>
 
 
-<div class="event">
-<div class="yellow" style="width:100%"></div>;
+<div class="yellow" id="yellow" style="width:100%">
+</div>
 <div class="calendar-container">
 
   <!-- ヘッダー -->
@@ -79,9 +79,9 @@
     let eventHtml = '';
 
     /* 仮の予定（あとでDBに置き換える） */
-   if (i === 19) {
+   	if (i === 19) {
 		eventHtml = '<div class="event" id="yellow" style="width:100%"></div>';
-		}
+	}
    
     calendarHtml += '<td class="' + todayClass + '">' + eventHtml + '<div>' + i + '</div>' + '</td>';
     
