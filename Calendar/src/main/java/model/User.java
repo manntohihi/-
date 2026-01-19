@@ -42,4 +42,6 @@ public class User {
 	public int getIcon() {
 		return icon;
 	}
+	
+	//
 }
