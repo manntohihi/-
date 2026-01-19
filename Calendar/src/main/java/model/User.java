@@ -7,7 +7,6 @@ public class User {
 	private String userName;
 	private int icon;
 	
-	
 	//userIdのsetter&getter
 	public void setUserId(int userId) {
 		this.userId = userId;
