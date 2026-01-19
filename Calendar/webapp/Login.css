@@ -65,11 +65,11 @@
 }
 .btn-link {
     display: inline-block; /* 幅や高さを指定できるようにする */
-    padding: 10px 20px;    /* ボタンの内側の余白（上下10px、左右20px） */
+    padding: 5px 10px;    /* ボタンの内側の余白（上下10px、左右20px） */
     background-color: rgb(217, 217, 217); /* 背景色（青） */
     color: rgb(0, 0, 0);          /* 文字色（黒） */
     text-decoration: none; /* リンクの下線を消す */
-    border-radius: 5px;    /* 角を丸くする */
+    border-radius: 1px;    /* 角を丸くする */
 }
 .btn-link:hover {
     background-color: rgb(217, 217, 217); /* ホバー時の背景色（濃い青） */
