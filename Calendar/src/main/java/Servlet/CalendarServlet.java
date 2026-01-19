@@ -29,7 +29,9 @@ public class CalendarServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		RequestDispatcher dispatcher = 
+				request.getRequestDispatcher("SchedulEntry.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	/**
@@ -37,9 +39,20 @@ public class CalendarServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("サーブレットに移動");
+	    String startDate = request.getParameter("startDate");
+	    String endDate   = request.getParameter("endDate");
+	    String staffName = request.getParameter("staffName");
+	    String memo      = request.getParameter("memo");
+	    
+	    System.out.println("開始日: " + startDate);
+	    System.out.println("終了日: " + endDate);
+	    System.out.println("担当者: " + staffName);
+	    System.out.println("メモ: " + memo);
 		RequestDispatcher dispatcher = 
 				request.getRequestDispatcher("SchedulEntry.jsp");
 		dispatcher.forward(request, response);
+
 	}
 
 }

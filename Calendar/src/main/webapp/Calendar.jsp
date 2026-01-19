@@ -12,17 +12,39 @@
 
 <body>
 
-<h2>今月のカレンダー</h2>
 
-<!-- カレンダー表示エリア -->
-<div id="calendar"></div>
+<div class="event">
+<div class="yellow" style="width:100%"></div>;
+<div class="calendar-container">
+
+  <!-- ヘッダー -->
+  <div class="calendar-header">
+    <div class="ym">
+      <span id="year"></span>
+      <span id="month"></span>
+    </div>
+   	<form action="CalendarServlet" method="get">
+		<input type="submit" value="予定を入力する">
+	</form>
+	
+  </div>
+	
+  <!-- カレンダー -->
+  <div id="calendar"></div>
+
+</div>
 
 <script>
   const calendarEl = document.getElementById('calendar');
+
   const date = new Date();
   const currentYear = date.getFullYear();
-  const currentMonth = date.getMonth();
+  const currentMonth = date.getMonth(); // 0始まり
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+
+  document.getElementById('year').textContent = currentYear;
+  document.getElementById('month').textContent = (currentMonth + 1) + '月';
 
   const today = new Date();
   const todayYear = today.getFullYear();
@@ -47,21 +69,26 @@
         calendarHtml += '<td></td>';
       }
     }
-
+	
     let isToday =
       currentYear === todayYear &&
       currentMonth === todayMonth &&
       i === todayDate;
 
-    let todayClass = isToday ? ' today' : '';
+    let todayClass = isToday ? 'today' : '';
+    let eventHtml = '';
 
-    calendarHtml += '<td class="' + todayClass + '">' + i + '</td>';
-
+    /* 仮の予定（あとでDBに置き換える） */
+   if (i === 19) {
+		eventHtml = '<div class="event" id="yellow" style="width:100%"></div>';
+		}
+   
+    calendarHtml += '<td class="' + todayClass + '">' + eventHtml + '<div>' + i + '</div>' + '</td>';
+    
+    
     if (dayOfWeek === 6) {
       calendarHtml += '</tr>';
-      if (i < daysInMonth) {
-        calendarHtml += '<tr>';
-      }
+      if (i < daysInMonth) calendarHtml += '<tr>';
     } else if (i === daysInMonth) {
       for (let j = dayOfWeek + 1; j <= 6; j++) {
         calendarHtml += '<td></td>';
@@ -73,9 +100,7 @@
   calendarHtml += '</tbody></table>';
   calendarEl.innerHTML = calendarHtml;
 </script>
-<form action="CalendarServlet" method="post">
-	<input type="submit" value="予定を入力する">
-</form>
+
 </body>
 
 </html>
