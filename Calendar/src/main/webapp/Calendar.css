@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
-
 /* ページ全体の中央寄せ */
 body {
   display:flex;
@@ -36,3 +34,25 @@ th {
   color: #d00000;
   font-weight: bold;
 }
+td {
+  min-height: 80px;
+  position: relative;
+  vertical-align: top;
+  overflow: visible;
+}
+
+/* 予定バー共通 */
+.event {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 20px;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+/* 色 */
+#yellow { background: yellow; }
+.purple { background: purple; }
+.blue   { background: #4da3ff; }
+.red    { background: red; }
