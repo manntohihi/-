@@ -12,7 +12,8 @@
 <body>
 
 
-
+<div class="event">
+<div class="yellow" style="width:100%"></div>;
 <div class="calendar-container">
 
   <!-- ヘッダー -->
@@ -26,7 +27,7 @@
 	</form>
 	
   </div>
-
+	
   <!-- カレンダー -->
   <div id="calendar"></div>
 
