@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="mypage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflame.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
+    
     <body>
         <!--アイコン表示＆アイコン変更画面遷移ボタン-->
         <div class="icon">

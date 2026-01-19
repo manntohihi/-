@@ -1,7 +1,6 @@
 package model;
 
 public class User {
-	
 	//USERテーブル用のローカル変数
 	private int userId;
 	private String passwd;
