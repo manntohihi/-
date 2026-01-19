@@ -52,7 +52,7 @@ td {
 }
 
 /* 色 */
-#yellow { background: yellow; }
+.yellow { background: yellow; }
 .purple { background: purple; }
 .blue   { background: #4da3ff; }
 .red    { background: red; }

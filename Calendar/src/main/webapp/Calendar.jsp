@@ -13,7 +13,8 @@
 <body>
 
 
-<div class="yellow" id="yellow" style="width:100%"></div>
+<div class="yellow" id="yellow" style="width:100%">
+</div>
 <div class="calendar-container">
 
   <!-- ヘッダー -->
