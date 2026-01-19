@@ -1,110 +1,89 @@
 @charset "UTF-8";
 
-/*CSSのリセット＆box-sizingの統一*/
-*{
+/* リセット */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*ページ全体の文字スタイル＆背景色*/
-body{
+/* 全体設定 */
+body {
     font-family: sans-serif;
-    line-height: 1.6;
+    background: #fff;
     color: #333;
-    background-color: rgb(255, 255, 255);
-    position: relative;
+    padding-bottom: 80px; /* bottom-navのスペース確保 */
 }
 
-/*アイコンの位置*/
-.icon{
-    position: absolute;
-    top: 50px;
-    left: 300px;
+/* コンテナ */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
 }
 
-/*アイコンの背景色＆枠の色*/
-.icon{
-    width: 250px;
-    height: 250px;
-    background-color: #ffb6b6;
-    border: 3px solid#000000;
+/* アイコン */
+.icon {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    background: #ffb6b6;
     overflow: hidden;
+    border: 3px solid #000;
 }
 
-/*アイコンに張る画像関連*/
-.icon img{
+.icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/*名前変更ボタン関連*/
-.namecgbox{
-   position: absolute;
-   top: 250px;
-   right: 510px;
+/* 情報エリア */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-/*名前変更ボタン関連*/
-.namecgbtn{
-    width: 300px;
-    padding: 10px 100px;
+.namecgbtn, .logoutbtn {
+    padding: 10px 20px;
     background: #515151;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 6px;
+    cursor: pointer;
 }
 
-/*ログアウトボタン関連*/
-.logoutbox{
-    position: absolute;
-    top: 500px;
-    right: 100px;
-}
-
-/*ログアウトボタン関連*/
-.logoutbtn{
-    width: 300px;
-    padding: 10px 100px;
-    background: #515151;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 6px;
-}
-
-.bottom-nav{
+/* ナビゲーションバー */
+.bottom-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
-    border-top: 1px solid #000000;
-    background: #fafafad3;
+    background: #fafafa;
+    border-top: 1px solid #000;
 }
 
-.nav-item{
+.nav-item {
     flex: 1;
     text-align: center;
-    padding: 75px 0;
+    padding: 15px 0;
     text-decoration: none;
     color: #070707;
-    border-right: 1px solid #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
 }
 
-.nav-item:last-child{
-    border-right: none;
-}
-
-.nav-item i{
-    font-size: 20px;
-}
-
-.nav-item:hover{
+.nav-item:hover {
     background: #aca4ff;
+}
+
+.nav-item i {
+    font-size: 20px;
 }
