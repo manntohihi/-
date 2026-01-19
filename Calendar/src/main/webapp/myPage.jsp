@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <title>マイページ画面</title>
         <link rel="stylesheet" href="mypage.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflame.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
     
     <body>
@@ -44,7 +44,7 @@
                 <span>カレンダー画面へ</span>
             </a>
             <!--マイページ画面遷移ボタン-->
-            <a href="mypage.html" class="nav-item">
+            <a href="mypage.jsp" class="nav-item">
                 <i class="fa-solid fa-gear"></i> 
                 <img src="">
             </a>
