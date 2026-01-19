@@ -43,5 +43,5 @@ public class User {
 		return icon;
 	}
 	
-	//テスト
+	
 }
