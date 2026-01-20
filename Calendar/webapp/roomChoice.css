@@ -6,7 +6,7 @@
 .grid_test-child:nth-child(1) {
     grid-column:1/4;    /* 配置指定 */
     grid-row:1;       /* 配置指定 */
-    place-items: center;
+    place-items: center; 
 }
 
 .grid_test-child:nth-child(2) {
