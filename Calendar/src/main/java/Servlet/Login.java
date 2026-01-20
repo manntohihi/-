@@ -31,7 +31,9 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		RequestDispatcher dispatcher;
+		dispatcher = request.getRequestDispatcher("/Login.html");
+		dispatcher.forward(request,response);
 	}
 
 	/**
