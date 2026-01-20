@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+import dao.UserDao;
 import model.User;
 
 /**
@@ -47,14 +48,19 @@ public class Login extends HttpServlet {
 		user.setUserId(ID);
 		user.setPasswd(password);
 		boolean loginJud = false;
+		
+		UserDao ud = new UserDao();
+		ud.login(user);
+		
 		RequestDispatcher dispatcher;
-		/*if (loginJud==true){
+		if (loginJud==true){
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser",user);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/roomSelection.html");
+			dispatcher = request.getRequestDispatcher("/roomSelection.html");
 			dispatcher.forward(request,response);
-
-		}*/
+		}
+		//テスト
+		/*
 		if(ID==111111) {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser",user);
@@ -64,6 +70,7 @@ public class Login extends HttpServlet {
 			dispatcher = request.getRequestDispatcher("/LoginError.html");
 			dispatcher.forward(request,response);
 		}
+		*/
 		
 	}
 
