@@ -59,7 +59,7 @@ public class Login extends HttpServlet {
 			dispatcher = request.getRequestDispatcher("/roomSelection.html");
 			dispatcher.forward(request,response);
 		}else {
-			dispatcher = request.getRequestDispatcher("/Login.html");
+			dispatcher = request.getRequestDispatcher("/LoginError.html");
 			dispatcher.forward(request,response);
 		}
 		
