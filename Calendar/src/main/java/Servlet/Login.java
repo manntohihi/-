@@ -50,7 +50,7 @@ public class Login extends HttpServlet {
 		boolean loginJud = false;
 		
 		UserDao ud = new UserDao();
-		ud.login(user);
+		//ud.login(user);
 		
 		RequestDispatcher dispatcher;
 		if (loginJud==true){
