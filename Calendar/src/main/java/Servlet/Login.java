@@ -8,36 +8,26 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Login
- */
-@WebServlet("/Login")
+import model.User;
+
+@WebServlet("/login")
 public class Login extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Login() {
-        super();
-        // TODO Auto-generated constructor stub
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+
+        // ユーザーが入力した値を取得
+        int id = Integer.parseInt(request.getParameter("id"));
+        String password = request.getParameter("password");
+        String name = request.getParameter("name");
+        int icon = Integer.parseInt(request.getParameter("icon"));
+        //Userインスタンス作成
+        User user = new User(id, password,name, icon);
+        
+
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Login.java");
-		String ID = request.getParameter("ID");
-		String password = request.getParameter("password");
-		
-	}
-
 }
