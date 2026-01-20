@@ -19,7 +19,6 @@
             <a href="#"><button class="logoutbtn">ログアウト</button></a>
         </div>
     </div>
-
     <div class="bottom-nav">
         <a href="#" class="nav-item"><i class="fa-solid fa-house"></i></a>
         <a href="Calendar.jsp" class="nav-item"><i class="fa-solid fa-calendar"></i><span>カレンダー画面へ</span></a>
