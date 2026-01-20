@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import model.User;
 
-@WebServlet("/login")
+ @WebServlet("/login")
 public class Login extends HttpServlet {
 
     @Override
@@ -25,7 +25,7 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
         String name = request.getParameter("name");
         int icon = Integer.parseInt(request.getParameter("icon"));
-        //Userインスタンス作成
+         //Userインスタンス作成
         User user = new User(id, password,name, icon);
         
 
