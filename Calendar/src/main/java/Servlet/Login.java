@@ -20,7 +20,7 @@ public class Login extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 
-        // ユーザーが入力した値を取得
+         // ユーザーが入力した値を取得
         int id = Integer.parseInt(request.getParameter("id"));
         String password = request.getParameter("password");
         String name = request.getParameter("name");
