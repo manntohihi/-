@@ -12,7 +12,7 @@ public class User {
 		
 	}
 	
-	public User(int userId,String passwd,String userName,int icon) {
+	 public User(int userId,String passwd,String userName,int icon) {
 		
 	}
 	
